@@ -1,0 +1,108 @@
+.banner {
+  width: 100%;
+  height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1470922792794-b15b12d20e80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-weight: bolder;
+  font-size: 55px;
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.destinos {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-destination {
+  height: 250px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  transition: transform 330ms ease-in-out;
+}
+
+.card-destination:hover {
+  transform: scale(1.05)
+}
+
+.ba {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/EWRWZLV7FZEM7C24TIEPFBJCP4.jpg);
+  background-size: cover;
+}
+
+.li {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://revistaelconocedor.com/wp-content/uploads/2018/05/lima4.jpg);
+  background-size: cover;
+}
+
+.cdmx {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://storage.googleapis.com/crabi-blog-media/2021/05/Obtener-el-Pase-Turistico-de-la-CDMX-v001-1024x518.jpeg);
+  background-size: cover;
+}
+
+.ny {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-688899881-1519413300.jpg);
+  background-size: cover;
+}
+
+.paris {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg);
+  background-size: cover;
+}
+
+.london {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.tacdn.com/media/attractions-splice-spp-674x446/09/93/6a/89.jpg);
+  background-size: cover;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
