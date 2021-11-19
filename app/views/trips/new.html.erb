@@ -1,0 +1,10 @@
+<h1>New trip</h1>
+
+<%= simple_form_for @trip do |f| %>
+  <%= f.input :date %>
+  <%= f.input :destination %>
+  <%= f.input :departure %>
+  <%= f.input :duration %>
+  <%= f.input :price %>
+  <%= f.button :submit %>
+<% end %>
