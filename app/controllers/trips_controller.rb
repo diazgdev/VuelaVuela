@@ -13,6 +13,10 @@ class TripsController < ApplicationController
     redirect_to trip_path(@trip)
   end
 
+  def index
+    @trips = Trip.all
+  end
+
   private
 
   def trip_params
