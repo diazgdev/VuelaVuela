@@ -38,6 +38,14 @@
   transition: transform 330ms ease-in-out;
 }
 
+.card-destination a {
+  color: white;
+}
+
+.card-destination a:hover {
+  text-decoration: none;
+}
+
 .card-destination:hover {
   transform: scale(1.05)
 }
