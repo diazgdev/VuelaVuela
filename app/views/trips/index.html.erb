@@ -1,10 +1,11 @@
-<div class="container">
+<h2 class="my-5" style="text-align: center;">Nuestros destinos</h2>
+<div class="container my-5">
 <div class="cards">
 <%  @trips.each do |trip| %>
 
 <div class="trip-card">
 <div class="card-destination" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?<%= trip.destination %>,landscape'); background-size: cover;">
-    <%= trip.destination%>
+    <%= link_to "#{trip.destination}", "#{trip.id}"%>
 </div>
 <div class="trip-info">
 Date: <%=trip.date %> <br>
