@@ -5,27 +5,27 @@
 <div class="container mb-5">
 <div class="cards">
   <div class="card-destination ba">
-    Buenos Aires
+    <a href="trips/<%= Trip.find_by(destination:"Buenos Aires").id%>">Buenos Aires</a>
   </div>
 
   <div class="card-destination li">
-    Lima
+    <a href="trips/<%= Trip.find_by(destination:"Lima").id%>">Lima</a>
   </div>
 
   <div class="card-destination cdmx">
-    CDMX
+    <a href="trips/<%= Trip.find_by(destination:"CDMX").id%>">CDMX</a>
   </div>
 
   <div class="card-destination ny">
-    New York
+    <a href="trips/<%= Trip.find_by(destination:"New York").id%>">New York</a>
   </div>
 
   <div class="card-destination paris">
-    Paris
+    <a href="trips/<%= Trip.find_by(destination:"Paris").id%>">Paris</a>
   </div>
 
   <div class="card-destination london">
-    London
+    <a href="trips/<%= Trip.find_by(destination:"London").id%>">London</a>
   </div>
 </div>
 </div>
