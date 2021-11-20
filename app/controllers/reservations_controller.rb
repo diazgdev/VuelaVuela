@@ -11,6 +11,7 @@ class ReservationsController < ApplicationController
     @reservation.trip = @trip
     @reservation.user = @user
     @reservation.save!
-    redirect_to trips_path
+    flash[:alert] = "Reserva realizada correctamente!"
+    redirect_to root_url
   end
 end
