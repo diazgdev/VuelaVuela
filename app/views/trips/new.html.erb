@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <div class="flat-form">
+        <div class="col text-center">
+          <h1>New trip</h1>
+        </div>
+        <div class="mt-3">
+          <div class="mt-3">
+            <%= simple_form_for @trip do |f| %>
+              <%= f.input :date %>
+              <%= f.input :destination %>
+              <%= f.input :departure %>
+              <%= f.input :duration %>
+              <%= f.input :price %>
+              <div class="col text-center">
+                <%= f.button :submit, class: "btn btn-primary" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
