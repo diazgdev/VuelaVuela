@@ -1,10 +1,20 @@
-<h1>hola</h1>
-
+<div class="container">
+<div class="cards">
 <%  @trips.each do |trip| %>
 
-Date: <%=  @trip.date %> <br>
-Departure: <%= @trip.departure %> <br>
-Duration: <%=@trip.duration %> <br>
-Price: <%= @trip.price %> <br>
+<div class="trip-card">
+<div class="card-destination" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?<%= trip.destination %>,landscape'); background-size: cover;">
+    <%= trip.destination%>
+</div>
+<div class="trip-info">
+Date: <%=trip.date %> <br>
+Departure: <%= trip.departure %> <br>
+Duration: <%=trip.duration %> <br>
+Price: <%= trip.price %> <br>
+<%= link_to 'Más información', "trips/#{trip.id}"%>
 
-<%   end %>
+</div>
+</div>
+<% end %>
+</div>
+</div>
