@@ -1,0 +1,28 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.devise-links a {
+  color: white;
+  font-size: .8em;
+  margin-top: 10px;
+}
+
+.pull-right {
+  background-color: #1f526b;
+  padding: 30px;
+  color: white;
+  border-radius: 6px;
+}
+
+.pull-left {
+  padding: 30px;
+}
+
+.botoncito {
+  // background-color: white;
+  // color: #1f526b;
+  margin: 20px 0;
+}

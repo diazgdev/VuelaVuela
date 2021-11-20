@@ -1,0 +1,40 @@
+<div class="container register-container">
+  <div class="row">
+    <div class="login pull-left">
+      <div class="mobile">
+        <%#    %>
+        <h2>Heading out?<br/> Stay connected</h2>
+        <p>Visit <strong>daily smarty</strong> on your mobile phone.</p>
+      </div>
+    </div>
+    <div class="register pull-right">
+      <div class="header">
+        <h1>Sign In</h1>
+        <span>Access your account.</span>
+      </div>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <div>
+          <%= f.label :email %>
+          <%= f.email_field :email, class:"me-1"%>
+        </div>
+
+        <div>
+          <%= f.label :password, class:"form-label" %>
+          <%= f.password_field :password, autocomplete: "off", class:"me-1" %>
+        </div>
+      </div>
+
+        <div class="actions">
+          <%= f.submit "Log In", class: "btn btn-primary botoncito" %>
+        </div>
+
+        <div class="devise-links">
+          <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

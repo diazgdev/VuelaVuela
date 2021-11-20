@@ -4,3 +4,5 @@ Date: <%=  @trip.date %> <br>
 Departure: <%= @trip.departure %> <br>
 Duration: <%=@trip.duration %> <br>
 Price: <%= @trip.price %> <br>
+
+<%= link_to "Reservar", trip_reservations_path(@trip.id), method: :post %>
