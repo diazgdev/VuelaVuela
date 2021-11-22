@@ -1,8 +1,15 @@
-<h1>I am a trip to <%= @trip.destination %> </h1>
+<div class="hero">
+  <%= @trip.destination %>
+</div>
 
-Date: <%=  @trip.date %> <br>
-Departure: <%= @trip.departure %> <br>
-Duration: <%=@trip.duration %> <br>
-Price: <%= @trip.price %> <br>
-
-<%= link_to "Reservar", trip_reservations_path(@trip.id), method: :post %>
+<div class="container trip-container">
+  <div class="row gx-5 info">
+  <div class="col-sm-8">
+    <h2><%= @trip.destination %></h2>
+    <hr>
+  </div>
+  <div class="col-sm-4">
+    <h3>Reservation box</h3>
+  </div>
+</div>
+</div>
