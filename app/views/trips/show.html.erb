@@ -1,8 +1,24 @@
-<h1>I am a trip to <%= @trip.destination %> </h1>
+<div class="hero">
+  <h1>Sobrevuela <%= @trip.destination %></h1>
+</div>
 
-Date: <%=  @trip.date %> <br>
-Departure: <%= @trip.departure %> <br>
-Duration: <%=@trip.duration %> <br>
-Price: <%= @trip.price %> <br>
-
-<%= link_to "Reservar", trip_reservations_path(@trip.id), method: :post %>
+<div class="container trip-container">
+  <div class="row gx-5 info">
+  <div class="col-sm-8">
+    <h2 class=" "><%= @trip.destination %></h2>
+    <hr>
+    Rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> |
+    Duración: <%=@trip.duration %> |
+    <hr>
+    <h3>Sobre este viaje: </h3>
+    <%= @trip.description %>
+    <h3 class="my-3">Galería de fotos: </h3>
+    <img src="https://gaz.mx/projects/vuelavuela/assets/helicopter-trip-1.jpg" alt="..." width="230px" height="150px" class="p-gallery">
+    <img src="https://gaz.mx/projects/vuelavuela/assets/helicopter-trip-2.jpg" alt="..." width="230px" height="150px" class="p-gallery">
+    <img src="https://gaz.mx/projects/vuelavuela/assets/helicopter-trip-3.jpg" alt="..." width="230px" height="150px" class="p-gallery">
+  </div>
+  <div class="col-sm-4">
+    <h3>Reservation box</h3>
+  </div>
+</div>
+</div>
