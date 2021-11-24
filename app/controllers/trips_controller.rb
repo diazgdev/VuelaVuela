@@ -14,7 +14,11 @@ class TripsController < ApplicationController
   end
 
   def index
-    @trips = Trip.all
+    if params[:query].present?
+      @trips = Trip.where(destination: params[:query])
+    else
+      @trips = Trip.all
+    end
   end
 
   private
