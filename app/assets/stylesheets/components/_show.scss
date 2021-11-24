@@ -40,3 +40,25 @@ body {
 .p-gallery {
   border-radius: 6px;
 }
+
+.reservar a{
+  font-size: 30px;
+  color: white;
+  background-color: #198bba;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.reservar a:hover{
+  text-decoration: none;
+  background-color: #1f526b;
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.info-reserva {
+  font-size: 20px;
+}
+
+.left {
+  border-right: solid rgba(0, 0, 0, 0.1) 1px;
+}
