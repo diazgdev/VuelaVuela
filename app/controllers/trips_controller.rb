@@ -15,7 +15,7 @@ class TripsController < ApplicationController
 
   def index
     if params[:query].present?
-      @trips = Trip.where(destination: params[:query])
+      @trips = Trip.where("destination ILIKE ?", "%#{params[:query]}%")
     else
       @trips = Trip.all
     end
