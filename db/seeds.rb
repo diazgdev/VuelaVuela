@@ -6,11 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning DB"
+Reservation.destroy_all
 Trip.destroy_all
 puts "Done"
 puts "Creating seeds"
 Trip.create(date: Date.new(2021,12,12), destination: "Lima", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 149.00)
-Trip.create(date: Date.new(2021,12,12), destination: "CDMX", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 249.00)
+Trip.create(date: Date.new(2021,12,12), destination: "CDMX/Mexico", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 249.00)
 Trip.create(date: Date.new(2021,12,12), destination: "Buenos Aires",description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 199.00)
 Trip.create(date: Date.new(2021,12,12), destination: "Paris", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 179.00)
 Trip.create(date: Date.new(2021,12,12), destination: "London", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 299.00)
