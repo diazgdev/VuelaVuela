@@ -2,21 +2,21 @@
   <%= link_to "/#", class: "navbar-brand" do %>
     <%= image_tag "https://dewey.tailorbrands.com/production/brand_version_mockup_image/90/6396077090_772395e5-9df8-49bf-b77d-82ab62bcf351.png?cb=1637431978" %>
   <% end %>
-
-  <nav class="navbar navbar-light-color">
-    <div class="container-fluid">
-      <form class="d-flex">
-        <%= form_tag trips_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find your next adventure"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-      </form>
+  <div class="input-group justify-content-center">
+    <div class="d-flex">
+      <%= form_tag trips_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find your next adventure"
+      %>
     </div>
-  </nav>
+    <div class="d-flex">
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
