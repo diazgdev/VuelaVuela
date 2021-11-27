@@ -11,3 +11,9 @@
   width: 90px;
   margin: 0px 20px;
 }
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 1.2;
+}
