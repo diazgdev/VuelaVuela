@@ -23,8 +23,14 @@
         <p>Date: <%= @trip.date%></p>
         <p>Price: $<%= @trip.price %></p>
         <hr>
-        <div class="reservar">
-          <%= link_to "Book now", trip_reservations_path(@trip.id), method: :post %>
+        <div id="reservations my-5">
+          <%  if @reservations.present? %>
+            <h2 class="my-5" style="text-align: center;">Trip booked</h2>
+          <% else %>
+            <div class="reservar">
+              <%= link_to "Book now", trip_reservations_path(@trip.id), method: :post %>
+            </div>
+          <% end %>
         </div>
       </div>
       <div id="reviews my-5">

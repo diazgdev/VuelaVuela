@@ -3,6 +3,7 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @review = Review.new
     @reviews = Review.where(trip_id: params[:id])
+    @reservations = Reservation.where(trip_id: params[:id])
   end
 
   def new
