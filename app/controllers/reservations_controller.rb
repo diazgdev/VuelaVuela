@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     @reservation.user = @user
     @reservation.save!
     flash[:alert] = "Reserva realizada correctamente!"
-    redirect_to root_url
+    redirect_to trip_path(@trip)
   end
 
   def index
