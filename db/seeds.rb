@@ -16,4 +16,4 @@ Trip.create(date: Date.new(2021,12,12), destination: "Buenos Aires",description:
 Trip.create(date: Date.new(2021,12,12), destination: "Paris", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 179.00)
 Trip.create(date: Date.new(2021,12,12), destination: "London", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 299.00)
 Trip.create(date: Date.new(2021,12,12), destination: "New York", description: "blabla", departure: "5:00 P.M.", duration: "2:00 hours", price: 239.00)
-puts "Done"
+puts "Seeds compled"
