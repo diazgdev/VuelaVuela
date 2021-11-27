@@ -1,6 +1,8 @@
 class TripsController < ApplicationController
   def show
     @trip = Trip.find(params[:id])
+    @review = Review.new
+    @reviews = Review.all
   end
 
   def new

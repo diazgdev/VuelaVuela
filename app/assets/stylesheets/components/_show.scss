@@ -42,7 +42,7 @@ body {
 }
 
 .reservar a{
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   background-color: #198bba;
   border-radius: 6px;
@@ -61,4 +61,18 @@ body {
 
 .left {
   border-right: solid rgba(0, 0, 0, 0.1) 1px;
+}
+
+.review-form .btn{
+  font-size: 18px;
+  color: white;
+  background-color: #198bba;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.review-form .btn:hover{
+  text-decoration: none;
+  background-color: #1f526b;
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
 }
