@@ -1,0 +1,22 @@
+<h2 class="my-5 upcoming">My bookings</h2>
+<div class="container my-5">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Destination</th>
+        <th>Date</th>
+        <th>Departure</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <%  @trip_id.each do |i| %>
+    <tbody>
+      <tr>
+        <td><%= Trip.select([:destination]).where(id: i)[0].destination %></td>
+        <td><%= Trip.select([:date]).where(id: i)[0].date %></td>
+        <td><%= Trip.select([:departure]).where(id: i)[0].departure %></td>
+        <td><%= Trip.select([:duration]).where(id: i)[0].duration %></td>
+    </tbody>
+    <% end %>
+  </table>
+</div>

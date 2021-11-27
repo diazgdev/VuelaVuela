@@ -14,4 +14,13 @@ class ReservationsController < ApplicationController
     flash[:alert] = "Reserva realizada correctamente!"
     redirect_to root_url
   end
+
+  def index
+    @reservations = Reservation.all
+    @trip_id = []
+    @reservations.each do |reservation|
+      @trip_id << reservation.trip_id
+    end
+    @reservations = Trip.select([:destination]).where(id: @trip_id)[0].destination
+  end
 end
