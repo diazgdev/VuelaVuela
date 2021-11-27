@@ -62,7 +62,7 @@ GEM
       execjs (< 2.8.0)
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootsnap (1.9.1)
+    bootsnap (1.9.3)
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
@@ -94,7 +94,7 @@ GEM
     ffi (1.15.4)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
-    globalid (0.5.2)
+    globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
@@ -115,8 +115,6 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
-    nokogiri (1.12.5-x86_64-linux)
-      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -184,7 +182,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (4.0.3)
+    selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
@@ -198,7 +196,7 @@ GEM
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.4.0)
+    sprockets-rails (3.4.1)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
@@ -208,11 +206,11 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (2.0.4)
-      concurrent-ruby (~> 1.0)
+    tzinfo (1.2.9)
+      thread_safe (~> 0.1)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (4.1.0)
+    web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -233,22 +231,14 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-<<<<<<< HEAD
-=======
-  x86_64-darwin-20
->>>>>>> bb6854ccd618637153ff45beafd930b4c2b4a95c
   x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
   bootsnap (>= 1.4.2)
   byebug
-<<<<<<< HEAD
   capybara (>= 2.15)
-=======
-  capybara (>= 3.26)
   devise
->>>>>>> bb6854ccd618637153ff45beafd930b4c2b4a95c
   dotenv-rails
   font-awesome-sass
   jbuilder (~> 2.7)
@@ -273,8 +263,4 @@ RUBY VERSION
    ruby 2.7.3p183
 
 BUNDLED WITH
-<<<<<<< HEAD
    2.2.31
-=======
-   2.2.30
->>>>>>> bb6854ccd618637153ff45beafd930b4c2b4a95c

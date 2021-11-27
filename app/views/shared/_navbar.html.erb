@@ -4,18 +4,19 @@
   <% end %>
 
   <nav class="navbar navbar-light-color">
-  <div class="container-fluid">
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Find your next adventure" aria-label="Search">
-      <button class="btn btn-outline-danger" type="submit">Search</button>
-    </form>
-  </div>
+    <div class="container-fluid">
+      <form class="d-flex">
+        <%= form_tag trips_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find your next adventure"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </form>
+    </div>
   </nav>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
