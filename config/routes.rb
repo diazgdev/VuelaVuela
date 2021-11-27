@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :trips do
     resources :reservations, only: %i[new create]
+    resources :reviews, only: %i[new create]
   end
   post "trips", to: "trips#create"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
