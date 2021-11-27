@@ -17,28 +17,29 @@
       <img src="https://gaz.mx/projects/vuelavuela/assets/helicopter-trip-2.jpg" alt="..." width="230px" height="150px" class="p-gallery">
       <img src="https://gaz.mx/projects/vuelavuela/assets/helicopter-trip-3.jpg" alt="..." width="230px" height="150px" class="p-gallery">
     </div>
-    <div class="info-reserva pl-5">
-      <p>Departure: <%= @trip.departure%></p>
-      <p>Date: <%= @trip.date%></p>
-      <p>Price: $<%= @trip.price %></p>
-      <hr>
-      <div class="reservar">
-        <%= link_to "Book now", trip_reservations_path(@trip.id), method: :post %>
+    <div class="right col-sm-4">
+      <div class="info-reserva pl-4 pr-4">
+        <p>Departure: <%= @trip.departure%></p>
+        <p>Date: <%= @trip.date%></p>
+        <p>Price: $<%= @trip.price %></p>
+        <hr>
+        <div class="reservar">
+          <%= link_to "Book now", trip_reservations_path(@trip.id), method: :post %>
+        </div>
       </div>
-    </div>
-    <div id="reviews my-5">
-      <% if @reviews.blank? %>
-        Be the first to leave a review for <%= @trip.destination %>
-      <% else %>
-      <% end %>
-      <div class="review-form my-5 pl-3">
-        <%= simple_form_for([ @trip, @review ], remote: true) do |f| %>
-          <%= f.input :review, as: :text %>
-          <%= f.button :submit %>
+      <div id="reviews my-5">
+        <% if @reviews.blank? %>
+          <p class= "pt-5 pl-3">Be the first to leave a review for <%= @trip.destination %></p>
         <% end %>
-      <% @reviews.each do |review| %>
-        <p><%= review.review %></p>
-      <% end %>
+        <div class="review-form my-5 pl-3 pr-3">
+          <%= simple_form_for([ @trip, @review ], remote: true) do |f| %>
+            <%= f.input :review, as: :text %>
+            <%= f.button :submit %>
+          <% end %>
+        <% @reviews.each do |review| %>
+          <p class="pt-3" id="review-<%= review.id %>">- <%= review.review %></p>
+        <% end %>
+        </div>
       </div>
     </div>
   </div>
