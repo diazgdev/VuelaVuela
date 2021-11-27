@@ -1,7 +1,18 @@
 <h2 class="my-5" style="text-align: center;">Nuestros destinos</h2>
 <div class="container my-5">
+  <%  if @trips.empty? %>
+    <h2 class="my-5" style="text-align: center;">
+      We are sorry. We didn't find an adventure for your search.
+      <br>
+      But do not worry! We may have other options for you
+      <br>
+      <a href="/trips" class="link-primary">
+        Check all our upcoming trips
+      </a>
+    </h2>
+  <% else %>
   <div class="cards">
-  <%  @trips.each do |trip| %>
+    <% @trips.each do |trip| %>
     <div class="trip-card">
       <div class="card-destination" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?<%= trip.destination %>,landscape'); background-size: cover;">
       <%= link_to "#{trip.destination}", "trips/#{trip.id}"%>
@@ -15,5 +26,6 @@
       </div>
     </div>
     <% end %>
+  <% end %>
   </div>
 </div>
